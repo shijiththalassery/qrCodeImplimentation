@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Document, Page, Text, View, PDFDownloadLink, Image } from '@react-pdf/renderer';
+import { Document, Page, Text, View, PDFDownloadLink, Image} from '@react-pdf/renderer';
 import html2canvas from 'html2canvas';
 import QRCode from 'qrcode.react';
 
@@ -21,13 +21,12 @@ const Certificate = ({ qrCodeData }) => {
 
   const MyDocument = () => {
     return (
-      <Document>
-        <Page size="A5">
+        <Document>
+        <Page size="A5" style={{ marginLeft: 20, marginRight: 20, marginTop: 20, marginBottom: 20 }}>
           <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-         
             <Text style={{ fontSize: 24, marginBottom: 10 }}>Speak Sphere Certificate</Text>
             <Text style={{ fontSize: 18 }}>This is to certify that the student has successfully completed the course.</Text>
-            {qrCodeImage && <Image src={qrCodeImage} style={{ width: 400, height: 100 }} />}
+            {qrCodeImage && <Image src={qrCodeImage} style={{ width: 400, height: 50 }} />}
             {/* Add more text or information as needed */}
           </View>
         </Page>

@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Certificate from './certicate';
 import PdfDownloader from './Pdf';
 
+import Rec from './Rec';
 
 
 ReactDOM.render(
@@ -17,6 +18,7 @@ ReactDOM.render(
           <Route path="/" element={<App />} />
           <Route path="/card" element={<Certificate />} />
           <Route path="/download" element={<PdfDownloader />} />
+          <Route path="/rec" element={<Rec />} />
         </Routes>
       </div>
     </Router>
